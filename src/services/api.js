@@ -26,6 +26,7 @@ export const register = async (data) => {
 
 export const loginUser = async (data) => {
     try{
+        console.log(data)
         const response = await api.post('/auth/login',data,
         {
             headers: {
@@ -53,6 +54,7 @@ export const newTransaction = async (data) => {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
                 'Access-Control-Allow-Origin': '*',
+                'Authorization' : `Bearer ${data.access_token}`
                 }})
         return response.data
     } catch(error) {

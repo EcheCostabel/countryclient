@@ -7,6 +7,7 @@ import { UserContext } from "../../context/useUserContext";
 function ContactoNuevo() {
 
   const { user } = useContext(UserContext)
+  
 
   const navigate = useNavigate()
   const [ nombreyApellido, setNombreyApellido ] = useState('')
@@ -25,7 +26,8 @@ function ContactoNuevo() {
         const data = {
         amount: importe,
         senderId: user.user.id,
-        receiverId: cbu
+        receiverId: cbu,
+        access_token: user.access_token
       }
       try {
         await newTransaction(data);
