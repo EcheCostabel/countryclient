@@ -145,7 +145,7 @@ function Registro() {
               <input
                 type={mostrarContraseña1 ? "text" : "password"}
                 id="password"
-                className="rounded-2xl h-10 p-2 pr-24"
+                className="rounded-2xl h-10 p-2 w-full"
                 onChange={(e) => setPassword(e.target.value)}
               />
               <button
